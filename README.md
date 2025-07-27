@@ -12,7 +12,7 @@
 2.  データベースの作成・初期化
     付属ファイルのデータベース初期化スクリプト`db_init.sql`を実行
     ```sh
-    mysql -u root -p < init_database.sql
+    mysql -u root -p < db_init.sql
     ```
 
 3.  フロントエンドのサーバーの立ち上げ
