@@ -22,7 +22,7 @@
 
 4.  バックエンドのサーバの立ち上げ
     ```sh
-    python manage.py runserver --settings.  --
+    python manage.py runserver --settings=config.settings.development
     ```
 
 4.  以下のURLにアクセス
