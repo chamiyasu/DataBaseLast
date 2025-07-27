@@ -9,18 +9,25 @@
     docker-compose up --build
     ```
 
-2.  バックエンドコンテナ内でデータベースのマイグレーションの実行
+2.  データベースの作成・初期化
+    付属ファイルのデータベース初期化スクリプト`db_init.sql`を実行する
+    MySQL?にログインした状態にて
     ```sh
-    docker-compose exec backend python manage.py migrate
+    yarn dev
     ```
 
-3.  バックエンドのカスタムコマンドを実行
+3.  フロントエンドのサーバーの立ち上げ
     ```sh
-    docker-compose exec backend python manage.py 
+    yarn dev
+    ```
+
+4.  バックエンドのサーバの立ち上げ
+    ```sh
+    python manage.py runserver --settings.  --
     ```
 
 4.  以下のURLにアクセス
-    * `http://localhost:3000/food/diary`
+    `http://localhost:3000/food/diary`
 
 
 ## プロジェクト概要
