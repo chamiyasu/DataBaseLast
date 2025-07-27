@@ -2,6 +2,27 @@
 
 ## 実行方法
 
+本プロジェクトは、Dockerを使用して開発環境を構築します。
+
+1.  プロジェクトルートでDockerコンテナを起動します。
+    ```sh
+    docker-compose up --build
+    ```
+
+2.  バックエンドコンテナ内でデータベースのマイグレーションを実行します。
+    ```sh
+    docker-compose exec backend python manage.py migrate
+    ```
+
+3.  バックエンドのカスタムコマンドを実行します。
+    ```sh
+    docker-compose exec backend python manage.py import_sales
+    ```
+
+4.  以下のURLにアクセスして、アプリケーションを確認してください。
+    * **フロントエンド**: `http://localhost:3000`
+    * **バックエンド**: `http://localhost:8000`
+
 
 ## プロジェクト概要
 
